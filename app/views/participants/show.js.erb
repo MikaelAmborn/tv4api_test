@@ -1,0 +1,4 @@
+console.log("hejsan");
+console.log("<%= @person_tag_id %>");
+console.log("<%= @person_info %>");
+$("#<%= @person_tag_id %>").html("<%= escape_javascript(render partial: 'video_list', locals: { videos: @person_info } ) %>");

@@ -1,0 +1,9 @@
+<ul>
+<% @program_info['participant_groups'].first['participants'].each do |participant| %>
+  <li>
+  <%= link_to participant['name'], "participants/#{participant['person_tag']}", remote: true %>
+  <br>
+  <div id="<%=participant['person_tag'] %>_videos"></div>
+  </li>
+<% end %>
+</ul>

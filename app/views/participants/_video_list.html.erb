@@ -1,0 +1,7 @@
+<ul>
+<% videos['results'].each do |result| %>
+  <li>
+    <%= link_to result['title'], "http://www.tv4play.se/program/lets-dance?video_id=#{result['id']}" %>
+  </li>
+<% end %>
+</ul>
