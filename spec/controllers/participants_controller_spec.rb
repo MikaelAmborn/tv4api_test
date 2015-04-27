@@ -11,11 +11,4 @@ RSpec.describe ParticipantsController, type: :controller do
       expect(response.body).to include 'mikael'
     end
   end
-
-  describe 'GET show' do
-    it 'returns a list of videos for the given person_tag' do
-      get :show, id: 'mikael'
-      expect(response.body).to include 'mikael video 1'
-    end
-  end
 end
