@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.program_image { width: 70%; display: block; margin-left: auto; margin-right: auto;  }
+.main { width: 70%; margin-left: auto; margin-right: auto; }
+
+ul { list-style-type: none; }

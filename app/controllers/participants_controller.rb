@@ -5,7 +5,7 @@ class ParticipantsController < ApplicationController
 
   def show
     @person_tag_id = "#{params[:id]}_videos"
-    @person_info = Tv4Service.person_search(params[:id])
+    @person_info = Tv4Service.person_search(URI.escape(params[:id]))
     respond_to do |format|
       format.js
     end

@@ -1,9 +1,11 @@
+<h4>Deltagare</h4>
 <ul>
 <% @program_info['participant_groups'].first['participants'].each do |participant| %>
   <li>
-  <%= link_to participant['name'], "participants/#{participant['person_tag']}", remote: true %>
+  <%= participant['name'] %>
+  <%= link_to "Videoklipp >", "participants/#{URI.escape(participant['person_tag'])}", remote: true %>
   <br>
-  <div id="<%=participant['person_tag'] %>_videos"></div>
+  <div id="<%= participant['person_tag'] %>_videos"></div>
   </li>
 <% end %>
 </ul>
